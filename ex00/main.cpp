@@ -1,28 +1,18 @@
 #include <iostream>
 #include <exception>
-
-class child : public std::exception
-{
-public:
-    const char *what() const throw()
-    {
-        return (char *)"error";
-    }
-};
+#include "Bureaucrat.hpp"
 
 int main()
 {
-    child c;
     try
     {
-        int x;
-        std::cin >> x;
-        if (x > 10)
-            throw c;
-        std::cout << "he\n";
+        Bureaucrat c(150, "john");
+        c.increment(40);
+        std::cout<<c.getGrade();
     }
     catch (const std::exception &e)
     {
         std::cerr << e.what() << '\n';
     }
+    return (0);
 }
