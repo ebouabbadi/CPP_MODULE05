@@ -2,17 +2,20 @@
 #define FORM_HPP
 
 #include <iostream>
+#include "Bureaucrat.hpp"
 
 class Form
 {
 private:
     std::string const name;
-    bool _signed;
-    const int grade_execute;
-    const int grade_sign;
+    bool siGned;
+    const int gradeExecute;
+    const int gradeSign;
 
 public:
     Form();
+    Form(const Form &c);
+    Form &operator=(const Form &c);
     ~Form();
 };
 
