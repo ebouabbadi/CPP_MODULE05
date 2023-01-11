@@ -1,23 +1,26 @@
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#ifndef FORM_HPP
+#define FORM_HPP
 
 #include <iostream>
 #include <exception>
 
-class Bureaucrat
+class Form
 {
 private:
-    std::string const name;
-    int grade;
+    const std::string name;
+    bool siGned;
+    const int GradeExecute;
+    const int GradeSign;
 
 public:
-    Bureaucrat();
-    Bureaucrat(int G, std::string const N);
-    Bureaucrat(const Bureaucrat &c);
-    Bureaucrat &operator=(const Bureaucrat &c);
-    ~Bureaucrat();
-    int getGrade();
+    Form();
+    Form(const Form &c);
+    Form &operator=(const Form &c);
+    ~Form();
     std::string getName();
+    const int getGradeExecute();
+    const int getGradeSign();
+    bool getsiGned(0...);
 
     class GradeTooHighException : public std::exception
     {
@@ -36,8 +39,6 @@ public:
             return (char *)"Grade is to low\n";
         }
     };
-    void increment();
-    void decrement();
 };
 
-#endif
+#endif......

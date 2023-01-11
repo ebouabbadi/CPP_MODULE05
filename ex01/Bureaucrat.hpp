@@ -15,7 +15,6 @@ public:
     Bureaucrat(int G, std::string const N);
     Bureaucrat(const Bureaucrat &c);
     Bureaucrat &operator=(const Bureaucrat &c);
-    ~Bureaucrat();
     int getGrade();
     std::string getName();
 
@@ -38,6 +37,7 @@ public:
     };
     void increment();
     void decrement();
+    ~Bureaucrat();
 };
 
 #endif
