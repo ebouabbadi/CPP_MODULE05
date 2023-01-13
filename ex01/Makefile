@@ -7,7 +7,7 @@ CPP = c++
 
 RM = rm -f
 
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
@@ -23,4 +23,4 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
-re : fclean all00000000000000
+re : fclean all

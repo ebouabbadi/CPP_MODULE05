@@ -3,7 +3,9 @@
 
 #include <iostream>
 #include <exception>
+#include "Form.hpp"
 
+class Form;
 class Bureaucrat
 {
 private:
@@ -35,6 +37,7 @@ public:
             return (char *)"Grade is to low\n";
         }
     };
+    void signForm(Form f);
     void increment();
     void decrement();
     ~Bureaucrat();
