@@ -26,12 +26,12 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &c)
     this->grade = c.grade;
     return (*this);
 }
-int Bureaucrat::getGrade()
+int Bureaucrat::getGrade() const
 {
     return (this->grade);
 }
 
-std::string Bureaucrat::getName()
+std::string Bureaucrat::getName() const
 {
     return (this->name);
 }
@@ -52,4 +52,13 @@ void Bureaucrat::decrement()
 
 Bureaucrat::~Bureaucrat()
 {
+}
+
+std::ostream & operator<<(std::ostream &out, const Bureaucrat &obj)
+{
+    out << obj.getName();
+    out << ", bureaucrat grade ";
+    out << obj.getGrade();
+    out <<".\n";
+    return (out);
 }

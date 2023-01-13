@@ -16,8 +16,8 @@ public:
     Bureaucrat(const Bureaucrat &c);
     Bureaucrat &operator=(const Bureaucrat &c);
     ~Bureaucrat();
-    int getGrade();
-    std::string getName();
+    int getGrade()const; 
+    std::string getName()const;
 
     class GradeTooHighException : public std::exception
     {
@@ -39,5 +39,7 @@ public:
     void increment();
     void decrement();
 };
+
+std::ostream &operator<<(std::ostream& out, const Bureaucrat &old_obj);
 
 #endif
