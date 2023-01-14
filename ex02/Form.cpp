@@ -1,16 +1,16 @@
 #include "Form.hpp"
 
-Form::Form() : siGned(false) , GradeSign(0), GradeExecute(0)
+Form::Form() : siGned(false) ,  GradeExecute(0),GradeSign(0)
 {
 
 }
 
-Form::Form(std::string n, int gS,int gE) : name(n), siGned(false), GradeSign(gS), GradeExecute(gE)
+Form::Form(std::string n, int gS,int gE) : name(n), siGned(false), GradeExecute(gE), GradeSign(gS)
 {
 
 }
 
-Form::Form(const Form &c) : name(c.name), siGned(false), GradeSign(c.GradeSign), GradeExecute(c.GradeExecute)
+Form::Form(const Form &c) : name(c.name), siGned(false), GradeExecute(c.GradeExecute), GradeSign(c.GradeSign)
 {
     *this = c;
 }
