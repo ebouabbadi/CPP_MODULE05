@@ -1,21 +1,14 @@
 #include <iostream>
 #include <exception>
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main()
 {
-    // try
-    // {
-    //     Bureaucrat c(151, "bro");
-    //     std::cout << "grade: " << c.getGrade() << " name: " << c.getName() << '\n';
-    // }
-    // catch (Bureaucrat::GradeTooHighException e)
-    // {
-    //     std::cout << e.what() << '\n';
-    // }
-    // catch (Bureaucrat::GradeTooLowException e)
-    // {
-    //     std::cout << e.what() << '\n';
-    // }
+    Bureaucrat b;
+    ShrubberyCreationForm f1("redouan");
+    Form *fff = &f1;
+    b.signForm(f1);
+    f1.execute(b);
     return 0;
 }
