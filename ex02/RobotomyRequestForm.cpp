@@ -22,7 +22,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &c
 
 void RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
-    if (this->getsiGned() == false || this->getGradeExecute >= execute->grade)
+    if (this->getsiGned() == false || this->getGradeExecute() >= executor.getGrade())
         throw(Bureaucrat::GradeTooHighException());
     std::cout << "RobotomyRequestForm :";
     srand(time(nullptr));

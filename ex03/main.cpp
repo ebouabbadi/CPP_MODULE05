@@ -3,12 +3,20 @@
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 
+int make1()
+{
+    return (1);
+}
+int make2()
+{
+    return (2);
+}
+int make3()
+{
+    return (3);
+}
+
 int main()
 {
-    // Bureaucrat b;
-    // ShrubberyCreationForm f1("redouan");
-    // Form *fff = &f1;
-    // b.signForm(f1);
-    // f1.execute(b);
-    // return 0;
+    int (make[3])(int)= {make1, make2, make3};
 }

@@ -22,7 +22,7 @@ ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
 {
-    if (this->getsiGned() == false || this->getGradeExecute >= execute->grade)
+    if (this->getsiGned() == false || this->getGradeExecute() >= executor.getGrade())
         throw(Bureaucrat::GradeTooHighException());
     std::ofstream outfile;
     outfile.open(this->target + "_shrubbery");
@@ -35,7 +35,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     outfile << "_- -   | | _- _\n";
     outfile << "  _ -  | |   -_\n";
     outfile << "      // \\\n";
-    outfile.cl
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm()
