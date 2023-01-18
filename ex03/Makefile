@@ -1,6 +1,6 @@
 NAME = bureaucrat
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp \
+SRC = main.cpp Bureaucrat.cpp AForm.cpp \
 		ShrubberyCreationForm.cpp \
 		 RobotomyRequestForm.cpp \
 		  PresidentialPardonForm.cpp \
@@ -11,14 +11,14 @@ CPP = c++
 
 RM = rm -f
 
-CPPFLAGS = #-Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all : $(NAME)
 
 $(NAME) : $(OBJ)
 	$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
-%.o:%.cpp Bureaucrat.hpp Form.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp  PresidentialPardonForm.hpp Intern.hpp
+%.o:%.cpp Bureaucrat.hpp AForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp  PresidentialPardonForm.hpp Intern.hpp
 	$(CPP) $(CPPFLAGS) -c $< -o $@
 
 clean : 

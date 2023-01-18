@@ -5,10 +5,13 @@
 
 int main()
 {
-    // Bureaucrat b;
-    // ShrubberyCreationForm f1("redouan");
-    // Form *fff = &f1;
-    // b.signForm(f1);
-    // f1.execute(b);
-    // return 0;
+    try
+    {
+        
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }

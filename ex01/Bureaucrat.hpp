@@ -9,23 +9,24 @@ class Form;
 class Bureaucrat
 {
 private:
-    std::string const name;
-    int grade;
+    const std::string name;
+    int Grade;
 
 public:
     Bureaucrat();
     Bureaucrat(int G, std::string const N);
     Bureaucrat(const Bureaucrat &c);
     Bureaucrat &operator=(const Bureaucrat &c);
-    int getGrade()const;
-    std::string getName()const;
+    ~Bureaucrat();
+    int getGrade() const;
+    std::string getName() const;
 
     class GradeTooHighException : public std::exception
     {
     public:
         const char *what() const throw()
         {
-            return ((char *)"Grade is to high");
+            return ((char *)"this Grade is Too High");
         }
     };
 
@@ -34,14 +35,14 @@ public:
     public:
         const char *what() const throw()
         {
-            return (char *)"Grade is to low\n";
+            return (char *)"this Grade is Too Low\n";
         }
     };
-    void signForm(Form f);
     void increment();
     void decrement();
-    ~Bureaucrat();
+    void signForm(Form f);
 };
-std::ostream &operator<<(std::ostream& out, const Bureaucrat &old_obj);
+
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &old_obj);
 
 #endif

@@ -3,11 +3,11 @@
 
 #include <iostream>
 #include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 #include <fstream>
 
 
-class ShrubberyCreationForm : public Form
+class ShrubberyCreationForm : public AForm
 {
 private:
       std::string target;
@@ -18,8 +18,6 @@ public:
     ShrubberyCreationForm &operator=(const ShrubberyCreationForm &c);
     void    execute(Bureaucrat const & executor) const;
     ~ShrubberyCreationForm();
-
-
 };
 
 #endif

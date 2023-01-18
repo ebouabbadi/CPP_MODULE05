@@ -16,14 +16,14 @@ private:
 
 public:
     Form();
-    Form(std::string n, int gS,int gE);
+    Form(std::string n, int gS, int gE);
     Form(const Form &c);
     Form &operator=(const Form &c);
     ~Form();
-    std::string getName()const;
-    int getGradeExecute()const;
-    int getGradeSign()const;
-    bool getsiGned()const;
+    std::string getName() const;
+    int getGradeExecute() const;
+    int getGradeSign() const;
+    bool getsiGned() const;
 
     void beSigned(Bureaucrat b);
     class GradeTooHighException : public std::exception
@@ -43,7 +43,15 @@ public:
             return (char *)"Grade is to low\n";
         }
     };
+    class FormNotSigned : public std::exception
+    {
+    public:
+        const char *what() const throw()
+        {
+            return (char *)"Form is not signd\n";
+        }
+    };
 };
-std::ostream &operator<<( std::ostream& out, const Form &obj);
+std::ostream &operator<<(std::ostream &out, const Form &obj);
 
 #endif

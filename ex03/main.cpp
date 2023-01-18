@@ -4,5 +4,6 @@
 int main()
 {
     Intern c;
-    Form *create = c.makeForm("PresidentialPardon", "john");
+    AForm *create;
+    create = c.makeForm("PresidentialPardon", "john");
 }
