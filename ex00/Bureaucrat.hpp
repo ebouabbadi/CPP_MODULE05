@@ -7,8 +7,8 @@
 class Bureaucrat
 {
 private:
-    std::string const name;
-    int grade;
+    const std::string name;
+    int Grade;
 
 public:
     Bureaucrat();
@@ -16,15 +16,15 @@ public:
     Bureaucrat(const Bureaucrat &c);
     Bureaucrat &operator=(const Bureaucrat &c);
     ~Bureaucrat();
-    int getGrade()const; 
-    std::string getName()const;
+    int getGrade() const;
+    std::string getName() const;
 
     class GradeTooHighException : public std::exception
     {
     public:
         const char *what() const throw()
         {
-            return ((char *)"Grade is to high");
+            return ((char *)"this Grade is Too High");
         }
     };
 
@@ -33,13 +33,13 @@ public:
     public:
         const char *what() const throw()
         {
-            return (char *)"Grade is to low\n";
+            return (char *)"this Grade is Too Low\n";
         }
     };
     void increment();
     void decrement();
 };
 
-std::ostream &operator<<(std::ostream& out, const Bureaucrat &old_obj);
+std::ostream &operator<<(std::ostream &out, const Bureaucrat &old_obj);
 
 #endif

@@ -6,17 +6,22 @@ int main()
 {
     try
     {
-        Bureaucrat c(151, "bro");
-        std::cout << "grade: " << c.getGrade() << " name: " << c.getName() << '\n';
+        Bureaucrat b1(140, "john");
+        b1.decrement();
+        std::cout << b1;
+        b1.decrement();
+        std::cout << b1;
+        b1.decrement();
+        std::cout << b1;
+        b1.decrement();
+        Bureaucrat b2(-1, "tom");
+        std::cout << b1;
+        b1.decrement();
+        std::cout << b1;
     }
-    catch (Bureaucrat::GradeTooHighException e)
+    catch (const std::exception &e)
     {
-        std::cout << e.what() << '\n';
+        std::cerr << e.what() << '\n';
     }
-    catch (Bureaucrat::GradeTooLowException e)
-    {
-        std::cout << e.what() << '\n';
-    }
-    
     return (0);
 }
