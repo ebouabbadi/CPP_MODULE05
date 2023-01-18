@@ -26,7 +26,7 @@ public:
     public:
         const char *what() const throw()
         {
-            return ((char *)"this Grade is Too High");
+            return ((char *)"this Grade is Too High\n");
         }
     };
 

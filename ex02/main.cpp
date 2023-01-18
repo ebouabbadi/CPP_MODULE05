@@ -5,13 +5,9 @@
 
 int main()
 {
-    try
-    {
-        
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
-    
+    ShrubberyCreationForm S("john");
+    Bureaucrat q(145, "tom");
+    q.executeForm(S);
+    q.signForm(S);
+    q.executeForm(S);
 }
